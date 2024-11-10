@@ -20,7 +20,7 @@
 
     <!-- Creating the Calculator Design -->
      <div class="calculator_container">
-           <textarea name="button-values" id="text-area"></textarea>
+           <textarea name="button-values" id="text-area" contenteditable="false"></textarea>
            <div class="button-container">
                       <button class="AC-button" onclick="clearDisplay()">AC</button>
                       <button class="Plus-Minus-Button">+/-</button>
@@ -69,15 +69,17 @@
 </script>
 <style>
            body {
-                      backdrop-filter: blur(50px);
-                      background:url(/Images/e8a9e469-0f1b-4483-b3c5-2bf0b6cb576f.jpeg);
-                      background-repeat: no-repeat; background-size: cover;
+                      /* backdrop-filter: blur(50px); */
+                      /* background:url(/Images/e8a9e469-0f1b-4483-b3c5-2bf0b6cb576f.jpeg);
+                      background-repeat: no-repeat; background-size: cover; */
                       height: 800px;
+                      background-color: burlywood;
            }
            .calculator_container {
                       width: 500px;
                       height: 500px;
-                      background-color: black;
+                      /* background-color: black; */
+                      background-color: rgb(11, 11, 11);
                       margin-left: auto;
                       margin-right: auto;
                       margin-top: 50px;
@@ -104,7 +106,7 @@
                       height: 340px;
            }
            .AC-button {
-                      background-color: gray; 
+                      background-color: rgb(0, 0, 0); 
                       border: none;
                       color: white; border-radius: 100px;
                       transition: all ease-in-out 0.5s;
@@ -116,14 +118,14 @@
                       }
            }
            .Plus-Minus-Button {
-                      background-color: gray; 
+                      background-color: rgb(0, 0, 0); 
                       border: none;
                       color: white; border-radius: 100px;
                       transition: all ease-in-out 0.5s;
                       font-family: Poor Richard;
                       font-weight: bolder;
                       &:hover {
-                                 background-color: rgb(32, 32, 32);
+                                 background-color: rgb(0, 0, 0);
                                  color: white;
                       }
            }
@@ -135,12 +137,12 @@
                       font-family: Poor Richard;
                       font-weight: bolder;
                       &:hover {
-                                 background-color: rgb(32, 32, 32);
+                                 background-color: rgb(0, 0, 0);
                                  color: white;
                       }
            }
            .Divide-Button, .button-x, .button-minus, .button-plus, .button-equalto {
-                      background-color: rgb(235, 111, 1);
+                      background-color: rgb(255, 119, 0);
                       border: none;
                       color: white;border-radius: 300px;
                       transition: all ease-in-out 0.5s; font-family: Poor Richard;
@@ -173,10 +175,10 @@
                                  color: white;
                       }
            }
-           @media (max-width: 375px) {
+           @media (max-width: 500px) {
                       .calculator_container {
                                  width: 300px;
-                                 height: 500px;
+                                 height: 600px;
                       }
            }
 </style>
