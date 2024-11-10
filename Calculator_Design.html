@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Gibson Webpage</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="website icon" href="/Images/Gabriel.png">
+  </head>
+  <body>
+      
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+    <!-- Creating the Calculator Design -->
+     <div class="calculator_container">
+           <textarea name="button-values" id="text-area" contenteditable="false"></textarea>
+           <div class="button-container">
+                      <button class="AC-button" onclick="clearDisplay()">AC</button>
+                      <button class="Plus-Minus-Button">+/-</button>
+                      <button class="Modolus-Button" onclick="appendToDisplay('%')">%</button>
+                      <button class="Divide-Button" onclick="appendToDisplay('/')">/</button>
+                      <button class="button-7" onclick="appendToDisplay('7')">7</button>
+                      <button class="button-8" onclick="appendToDisplay('8')">8</button>
+                      <button class="button-9" onclick="appendToDisplay('9')">9</button>
+                      <button class="button-x" onclick="appendToDisplay('*')">*</button>
+                      <button class="button-4" onclick="appendToDisplay('4')">4</button>
+                      <button class="button-5" onclick="appendToDisplay('5')">5</button>
+                      <button class="button-6" onclick="appendToDisplay('6')">6</button>
+                      <button class="button-minus" onclick="appendToDisplay('-')">-</button>
+                      <button class="button-1" onclick="appendToDisplay('1')">1</button>
+                      <button class="button-2" onclick="appendToDisplay('2')">2</button>
+                      <button class="button-3" onclick="appendToDisplay('3')">3</button>
+                      <button class="button-plus " onclick="appendToDisplay('+')">+</button>
+                      <button class="button-gs" onclick="owner()">GS</button>
+                      <button class="button-0" onclick="appendToDisplay('0')">0</button>
+                      <button class="button-dot" onclick="appendToDisplay('.')">.</button>
+                      <button class="button-equalto" onclick="calculate()">=</button>
+           </div>
+     </div>
+  </body>
+</html>
+<script>
+           const display = document.getElementById('text-area');
+
+           function appendToDisplay(input) {
+                      display.value += input;
+           }
+           function clearDisplay() {
+                      display.value = ""
+           }
+           function calculate() {
+                      try {
+                                 display.value =eval(display.value)
+                      }
+                      catch (erro) {
+                                 display.value = "Erro Encounter... Gibson Program :::()You didn't complete the calculation"
+                      }
+           }
+           function owner() {
+                      display.value = "This is gabriel samura calculator, for more project contact me on +2327328317"
+           }
+</script>
+<style>
+           body {
+                      /* backdrop-filter: blur(50px); */
+                      /* background:url(/Images/e8a9e469-0f1b-4483-b3c5-2bf0b6cb576f.jpeg);
+                      background-repeat: no-repeat; background-size: cover; */
+                      height: 800px;
+                      background-color: burlywood;
+           }
+           .calculator_container {
+                      width: 500px;
+                      height: 500px;
+                      /* background-color: black; */
+                      background-color: rgb(11, 11, 11);
+                      margin-left: auto;
+                      margin-right: auto;
+                      margin-top: 50px;
+                      border-radius: 10px;
+                      box-sizing: border-box;
+                      overflow: auto;
+                      box-shadow: 4px 5px 5px black;
+           }
+           #text-area {
+                      display: block;
+                      background-color: rgba(0, 0, 0, 0);
+                      border: 2px solid white;
+                      width: 90%; margin-top: 50px; color: white; margin-bottom: 20px;
+                      margin-left: auto; margin-right: auto;
+                      transition: all ease-in-out 0.5s;
+           }
+           #text-area:hover {
+                      border: 2px solid red; cursor:auto;
+           }
+           .button-container {
+                      display: grid;
+                      gap: 10px; padding-left: 10px; padding-right: 10px;
+                      grid-template-columns: 1fr 1fr 1fr 1fr;
+                      height: 340px;
+           }
+           .AC-button {
+                      background-color: rgb(0, 0, 0); 
+                      border: none;
+                      color: white; border-radius: 100px;
+                      transition: all ease-in-out 0.5s;
+                      font-family: Poor Richard;
+                      font-weight: bolder;
+                      &:hover {
+                                 background-color: rgb(32, 32, 32);
+                                 color: white;
+                      }
+           }
+           .Plus-Minus-Button {
+                      background-color: rgb(0, 0, 0); 
+                      border: none;
+                      color: white; border-radius: 100px;
+                      transition: all ease-in-out 0.5s;
+                      font-family: Poor Richard;
+                      font-weight: bolder;
+                      &:hover {
+                                 background-color: rgb(0, 0, 0);
+                                 color: white;
+                      }
+           }
+           .Modolus-Button {
+                      background-color: gray; 
+                      border: none;
+                      color: white; border-radius: 100px;
+                      transition: all ease-in-out 0.5s;
+                      font-family: Poor Richard;
+                      font-weight: bolder;
+                      &:hover {
+                                 background-color: rgb(0, 0, 0);
+                                 color: white;
+                      }
+           }
+           .Divide-Button, .button-x, .button-minus, .button-plus, .button-equalto {
+                      background-color: rgb(255, 119, 0);
+                      border: none;
+                      color: white;border-radius: 300px;
+                      transition: all ease-in-out 0.5s; font-family: Poor Richard;
+                      font-weight: bolder;
+                      &:hover {
+                                 background-color: rgb(255, 255, 255);
+                                 color: rgb(0, 0, 0);
+                      }
+           }
+           .button-7, .button-8, .button-9, .button-4, .button-5, .button-6, .button-1, .button-2, .button-3, .button-0, .button-dot {
+                      border: none;
+                      background-color: rgb(32, 32, 32);
+                      color: white; border-radius: 100px;
+                      transition: all ease-in-out 0.5s; font-family: Poor Richard;
+                      font-weight: bolder;
+                      &:hover {
+                                 background-color: black;
+                                 color: white;
+                      }
+           }
+           .button-gs {
+                      background-color: burlywood;
+                      border: none; color: rgb(0, 0, 0);
+                      border-radius: 100px;
+                      transition: all ease-in-out 0.5s;
+                      font-family: Poor Richard;
+                      font-weight: bolder;
+                      &:hover {
+                                 background-color: rgb(32, 32, 32);
+                                 color: white;
+                      }
+           }
+           @media (max-width: 500px) {
+                      .calculator_container {
+                                 width: 300px;
+                                 height: 600px;
+                      }
+           }
+</style>
